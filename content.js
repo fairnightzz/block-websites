@@ -13,7 +13,7 @@ chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
 
 let llist;
 
-fetch('https://gist.githubusercontent.com/fairnightzz/ff630af5273ce7889b2be1ca8c7a12d5/raw/8e795222dc9b73c3c7917d21b7eeb8384a967c8c/blacklist.json').then(function(response){
+fetch('https://files.zhehaizhang.com/keyword-blocker/blacklist.json').then(function(response){
     return response.json();
 }).then(function(obj) {
     llist = obj;
