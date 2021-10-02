@@ -18,13 +18,13 @@ fetch('https://files.zhehaizhang.com/keyword-blocker/blacklist.json').then(funct
 }).then(function(obj) {
     llist = obj;
     for (const link in llist) {
-      if (location.href.includes(link) && location.href !== ("https://"+link+"/"+llist[link])) {
-        location.replace("https://"+link+"/"+llist[link]);
+      console.log(location.href)
+      if (location.href.includes(link) && !location.href.includes("404")) {
+        location.replace(link+"/"+llist[link]);
       }
 
     }
 }).catch(function(error){
-    //console.log(error);
     console.error()
 });
 
